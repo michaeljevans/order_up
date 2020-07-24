@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Dish's show page" do
-  it "displays a list of ingredients for that dish and the chef's name " do
+  it "displays a list of ingredients, the chef's name, and total calories for the dish" do
     chef = Chef.create!(name: 'Gordon Ramsey')
     dish = chef.dishes.create!(name: 'Ribeye', description: '10 oz. Grassfed Ribeye with Brussels sprouts')
     ingredient_1 = Ingredient.create!(name: 'Steak', calories: 400)
@@ -34,5 +34,7 @@ RSpec.describe "Dish's show page" do
     end
 
     expect(page).to have_content(chef.name)
+
+    expect(page).to have_content("Total Calories: 707")
   end
 end
