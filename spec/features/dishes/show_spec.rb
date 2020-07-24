@@ -11,13 +11,13 @@ RSpec.describe "Dish's show page" do
     ingredient_5 = Ingredient.create!(name: 'Brussels Sprouts', calories: 75)
     ingredient_6 = Ingredient.create!(name: 'Olive Oil', calories: 100)
     ingredient_7 = Ingredient.create!(name: 'Butter', calories: 125)
-    dish_ingredient_1 = DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_1.id)
-    dish_ingredient_2 = DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_2.id)
-    dish_ingredient_3 = DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_3.id)
-    dish_ingredient_4 = DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_4.id)
-    dish_ingredient_5 = DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_5.id)
-    dish_ingredient_6 = DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_6.id)
-    dish_ingredient_7 = DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_7.id)
+    DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_1.id)
+    DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_2.id)
+    DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_3.id)
+    DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_4.id)
+    DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_5.id)
+    DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_6.id)
+    DishIngredient.create!(dish_id: dish.id, ingredient_id: ingredient_7.id)
 
     visit "/dishes/#{dish.id}"
 
