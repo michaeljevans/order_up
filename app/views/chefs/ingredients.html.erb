@@ -1,0 +1,8 @@
+<h1>Ingredient Repertoire</h1>
+<ul>
+  <% @ingredients.each do |ingredient| %>
+    <section class='ingredient'>
+      <li><%= ingredient.name %></li>
+    </section>
+  <% end %>
+</ul>
